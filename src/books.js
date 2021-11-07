@@ -1,4 +1,4 @@
-[
+let books = [
   {
     "author": "Chinua Achebe",
     "country": "Nigeria",
@@ -93,7 +93,7 @@
     "author": "Samuel Beckett",
     "country": "Republic of Ireland",
     "imageLink": "images/molloy-malone-dies-the-unnamable.jpg",
-    "language": "French, English",
+    "language": "French",
     "link": "https://en.wikipedia.org/wiki/Molloy_(novel)\n",
     "pages": 256,
     "title": "Molloy, Malone Dies, The Unnamable, the trilogy",
@@ -1000,3 +1000,5 @@
     "year": 1951
   }
 ]
+
+export default books;
