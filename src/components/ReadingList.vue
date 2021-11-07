@@ -1,13 +1,13 @@
 <template>
 <div class="wrapper">
   <div class="products">
-    <div class="product" v-for="book in books" :key="book.title">
+    <div class="product" v-for="book in books" :key="book.title+book.author">
       <div class="info">
         <h1>{{book.title}}</h1>
         <p>{{book.author}}</p>
       </div>
       <div class="image">
-        <img :src="'/'+book.imageLink">
+        <img :src="'../../'+book.imageLink">
       </div>
       <div class="year">
         <h2>{{book.year}}</h2>
