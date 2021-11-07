@@ -1,17 +1,19 @@
 <template>
 <div class="wrapper">
-  <div class="products">
-    <div class="product" v-for="book in books" :key="book.title+book.author">
+  <div class="books">
+    <div class="book" v-for="book in books" :key="book.title+book.author">
+      <a :href="book.link">
+        <div class="image">
+            <img :src="book.imageLink">
+        </div>
+      </a>
       <div class="info">
-        <h1>{{book.title}}</h1>
-        <p>{{book.author}}</p>
-      </div>
-      <div class="image">
-        <img :src="''+book.imageLink">
+          <h1>{{book.title}}</h1>
+          <p>{{book.author}}</p>
       </div>
       <div class="year">
-        <h2>{{book.year}}</h2>
-        <button class="auto" v-on:click="addBook(product)">Add to Reading List</button>
+          <h2>{{book.year}}</h2>
+          <button class="auto" v-on:click="addBook(book)">Add to<br>Reading List</button>
       </div>
     </div>
   </div>
@@ -20,7 +22,7 @@
 
 <script>
 export default {
-  name: 'Books',
+  name: 'BookList',
   props: {
     books: Array
   },
@@ -40,41 +42,39 @@ export default {
   justify-content: center;
 }
 
-.products {
+.books {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.product {
+.book {
   margin: 10px;
   margin-top: 50px;
   width: 200px;
 }
 
-.product img {
-  border: 2px solid #333;
-  height: 250px;
+.book a img {
+  height: 300px;
   width: 200px;
   object-fit: cover;
 }
 
-.product .image {
+.book a .image {
   display: flex;
   justify-content: center;
-  margin-bottom: 5px;
 }
 
 .info {
-  background: #F2921D;
+  background: #00a388;
   color: #000;
-  padding: 10px 30px;
+  padding: 4px 16px;
   height: 80px;
 }
 
 .info h1 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .info h2 {
@@ -83,12 +83,17 @@ export default {
 
 .info p {
   margin: 0px;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 
 .year {
   display: flex;
+  background: #00a388;
+  padding: 0 0.5rem;
+  align-items: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 button {
@@ -96,6 +101,7 @@ button {
   background: #000;
   color: white;
   border: none;
+  border-radius: 5px;
 }
 
 .auto {

@@ -4,10 +4,10 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-import books from './books.js'
+import bookData from './books.js'
 
 let data = {
-  books: books,
+  books: bookData,
   booksToRead: []
 }
 

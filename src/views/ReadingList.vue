@@ -2,19 +2,19 @@
 <div>
   <h1>Reading List</h1>
   <h3 id="emptyMessage">Reading List is empty</h3>
-  <ReadingList :booksToRead="booksToRead" />
+  <ToRead :booksToRead="booksToRead" />
 </div>
 </template>
 
 <script>
-import ReadingList from "../components/ReadingList.vue"
+import ToRead from "../components/ToRead.vue"
 export default {
   name: 'ReadingList',
   components: {
-    ReadingList
+    ToRead
   },
   computed: {
-    cart() {
+    booksToRead() {
       return this.$root.$data.booksToRead;
     }
   },

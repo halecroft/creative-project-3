@@ -45,7 +45,7 @@ body {
   margin: 50px 100px 0px 100px;
   min-height: 100vh;
   position: relative;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 }
 
 #menu {
@@ -57,7 +57,8 @@ body {
 }
 
 #menu a {
-  color: #B84901;
+  color: #00a388;
+  text-decoration: none;
 }
 
 #brand {
@@ -101,16 +102,13 @@ footer {
   width: 100%;
   justify-content: center;
   align-items: center;
-  height: 2rem;
+  height: 4rem;
+  padding-bottom: 5px;
 }
 
-footer a {
+footer a, footer a:visited {
   text-decoration: none;
-  color: #B84901;
-}
-
-footer a:visited {
-  text-decoration: none;
-  color: #B84901;
+  color: #00a388;
+  font-size: 1.25rem;
 }
 </style>

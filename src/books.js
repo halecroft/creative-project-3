@@ -96,7 +96,7 @@ let books = [
     "language": "French",
     "link": "https://en.wikipedia.org/wiki/Molloy_(novel)\n",
     "pages": 256,
-    "title": "Molloy, Malone Dies, The Unnamable, the trilogy",
+    "title": "The Trilogy",
     "year": 1952
   },
   {

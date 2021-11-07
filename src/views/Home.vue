@@ -1,6 +1,7 @@
 <template>
 <div>
   <div class="wrapper">
+    <h1>Welcome to the Notable Books Repository</h1>
     <div class="search">
       <form class="pure-form">
         <i class="fas fa-search"></i><input v-model="searchText" />
@@ -36,6 +37,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .search {
